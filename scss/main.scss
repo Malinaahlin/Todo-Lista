@@ -1,13 +1,13 @@
 /*
 Color palette
-#6B7280; - grey
-#374151; - dark grey
-#1F2937; - darker grey
-#111827; - black/darkest grey
-#EEE;    - white?
-#EC4899; - pink
-#8B5Cf6; - purple
-
+#dbdffd; - light blue
+#9ba3eb; - blue
+##646fd4; - darker blue
+#454fad; - darkest blue
+#EEE;    - white?   
+#808ffc - "Lägg till"-btn
+#342c6d - "Lägg till"-btn
+#342c6d - "Radera"-btn
 */
 
 * {
@@ -20,26 +20,24 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-color: #374151;
-    color: #6b7280;
+    background-color: #9BA3EB;
+    color: #DBDFFD;
 }
 
 header {
     padding: 2rem 1rem;
-    // max-width: 800px;
-    // width: 100%;
-    // margin: 0 auto;
 }
 
 header h1 {
     font-size: 2.5rem;
     font-weight: 300;
-    color: #6B7280;
+    color: #DBDFFD;
     margin-bottom: 1rem;
 }
 
 #todo-form {
     display: flex;
+    width: 500px;
 
 }
 
@@ -52,7 +50,7 @@ input, button {
 
 #new-todo-input {
     flex: 1 1 0%;
-    background-color: #1F2937;
+    background-color: #646FD4;
     padding: 1rem;
     border-radius: 1rem;
     margin-right: 1rem;
@@ -61,14 +59,19 @@ input, button {
 }
 
 #new-todo-input::placeholder {
-    color: #6B7280;
+    color: #DBDFFD;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-weight: 100;
 }
 
 #new-todo-submit {
     color: #EC4899;
     font-size: 1.25rem;
     font-weight: 700;
-    background-image: linear-gradient(to right, #EC4899, #8B5Cf6);
+    background-image: linear-gradient(to right, #808ffc, #342c6d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
@@ -85,28 +88,22 @@ input, button {
 
 main {
     flex: 1 1 0%;
-    padding: 2rem 1rem;
+    padding: 2rem 0;   //padding left och right 0
     max-width: 800px;
     width: 100%;
-    margin: 0 auto;
-}
-
-.todo-list {
-    padding: 1rem;
-
 }
 
 .task-list h2 {
     font-size: 1.5rem;
     font-weight: 300;
-    color: #6B7280;
+    color: #DBDFFD;
     margin-bottom: 1rem;
 }
 
 #todos .todo {
     display: flex;
     justify-content: space-between;
-    background-color: #111827;
+    background-color: #454fad;
     padding: 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
@@ -122,10 +119,6 @@ main {
     width: 100%;
     display: block;
     transition: 0.4s;
-}
-
-#todos .todo .content .text:not(:read-only) {
-    color: #EC4899;
 }
 
 #todos .todo .actions {
@@ -150,35 +143,7 @@ main {
     opacity: 0.6;
 }
 
-.todo .actions .edit {
-    background-image: linear-gradient(to right, #EC4899, #8B5Cf6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .todo .actions .delete {
-    color: crimson;
+    color: #342c6d;
 }
 
-
-//ena listan hamnar utanför margin på containern
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// div {
-//     width: 100px;
-//     height: 100px;
-//     background-color: aqua;
-// }
