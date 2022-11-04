@@ -1,3 +1,44 @@
+ let array = ["Handla", "Träna", "Läsa", "Plugga"];
+    console.log(array);
+
+    // let arr = document.getElementById("arr");
+
+    for (i = 0; i < array.length; i++){
+        console.log(array[i]);
+        let arrayContainer = document.createElement("ul");
+        let arrayList = document.createElement("li");
+        let checkboxes = document.createElement("input");
+
+        arrayContainer.appendChild(checkboxes);
+        checkboxes.type = "checkbox";
+        checkboxes.className = "checkbox";
+        arrayContainer.appendChild(arrayList);
+        document.body.appendChild(arrayContainer);
+
+        arrayList.innerHTML += array[i];
+
+             //EFTER EN HÄNDELSE
+        arrayList.addEventListener("click", myFunction);
+
+        function myFunction() {
+            console.log(arrayList);
+         
+
+            }
+
+   
+
+    }
+
+    // gör lista som loopar med alla 3 saker
+    // ta bort med splice 
+    // lägg till med push
+    // loopa 
+    // sätt innerhtml till en tom text.
+    // variabel.innerHTML(" ");
+
+
+
 window.addEventListener("load", () => {
     const form = document.querySelector("#todo-form");
     const input =document.querySelector("#new-todo-input");
